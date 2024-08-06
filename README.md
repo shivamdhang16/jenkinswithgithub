@@ -7,11 +7,12 @@ Repository URL
 Credentials
 Branches to build
 
-Shell command to run
 
-
+**
+Shell command to run**
 ls
-git clone https://github.com/shivamdhang16/jenkinswithgithub
-cd demojenkins
+git clone https://github.com/shivamdhang16/jenkinswithgithub.git
+cd jenkinswithgithub
 cat jenkins.py
-Python3 jenkins.py
+echo ${jenkins-a} | sudo -S apt-get install -y python3
+/usr/bin/python3 jenkins.py
