@@ -11,7 +11,7 @@ Shell command to run
 
 
 ls
-git clone https://github.com/shivamdhang16/demojenkins.git
+git clone https://github.com/shivamdhang16/jenkinswithgithub
 cd demojenkins
 cat jenkins.py
 Python3 jenkins.py
