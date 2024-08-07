@@ -21,3 +21,22 @@ echo ${jenkins-a} | sudo -S apt-get install -y python3
 **how to add variable**
 managejenkins--Global properties--Environment variables 
 print like     echo "enviromet is ${GLOBAL_VAR}"   
+
+
+
+
+
+ls
+git clone https://github.com/shivamdhang16/jenkinswithgithub.git
+cd jenkinswithgithub
+ls
+echo ${jenkins1} | sudo -S /usr/bin/apt-get install -y python3
+/usr/bin/python3 jenkins.py
+echo "its done"
+
+##printvariable
+name=shivam
+echo "my name is ${name}"
+echo "branch name is ${BUILD_ID}"
+echo "job name is ${JOB_NAME}"
+echo "enviromet is ${GLOBAL_VAR}"
