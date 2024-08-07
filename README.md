@@ -8,8 +8,7 @@ Credentials
 Branches to build
 
 
-**
-Shell command to run**
+**Shell command to run**
 
 ls
 git clone https://github.com/shivamdhang16/jenkinswithgithub.git
@@ -17,3 +16,8 @@ cd jenkinswithgithub
 cat jenkins.py
 echo ${jenkins-a} | sudo -S apt-get install -y python3
 /usr/bin/python3 jenkins.py
+
+
+**how to add variable**
+managejenkins--Global properties--Environment variables 
+print like     echo "enviromet is ${GLOBAL_VAR}"   
