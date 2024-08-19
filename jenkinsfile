@@ -1,0 +1,53 @@
+pipeline {
+    agent any
+
+    parameters {
+        string(name: 'person', defaultValue: 'shivam', description: "Name of the person")
+        booleanParam(name: 'ismale', defaultValue: true, description: "Is the person male?")
+        choice(name: 'city', choices: ['pune', 'mumbai'], description: "City selection")
+    }
+
+    environment {
+        NAME = 'shivamdhang'
+    }
+
+    stages {
+        stage('build') {
+            steps {
+                echo 'from build'
+                sh "date"
+                sh "pwd"
+            }
+        }
+        stage('test') {
+            steps {
+                echo 'from test'
+                echo 'commands'
+                sh '''
+                ls
+                pwd
+                date
+                '''
+            }
+        }
+        stage('deploy') {
+            steps {
+                echo 'from deploy'
+                echo 'environment variable'
+                sh 'echo "${BUILD_ID}"'
+                sh 'echo "${NAME}"'
+            }
+        }
+        stage('done') {
+            steps {
+                echo 'its done'
+            }
+        }
+    }
+    
+    post {
+        always {
+            echo 'anytime run'
+        }
+    }
+}
