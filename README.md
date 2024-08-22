@@ -1,11 +1,24 @@
 authentication with github
 
-Create PAT on github --> github-devoloper setting-PAT-Classice
-go to jenkins- your item -configure-user(github emailid)--password(PAT)
-required Step-->>>
-Repository URL
-Credentials
-Branches to build
+To connect GitHub and Jenkins using a Personal Access Token (PAT), follow these steps:
+
+Create a Personal Access Token on GitHub:
+
+Go to GitHub and log in to your account.
+Navigate to Settings > Developer settings > Personal access tokens.
+Click Generate new token.
+Give it a descriptive name, select the required scopes (e.g., repo for full control of private repositories), and click Generate token.
+Copy the generated token. You won’t be able to see it again.
+Configure Jenkins to Use the Token:
+
+Install GitHub Plugin: Ensure you have the GitHub plugin installed in Jenkins. Go to Manage Jenkins > Manage Plugins > Available tab and search for "GitHub Plugin" if it’s not already installed.
+Add GitHub Credentials:
+Go to Manage Jenkins > Manage Credentials.
+Choose the appropriate domain or (global) for all jobs.
+Click Add Credentials.
+Select Kind as Secret text.
+Paste the GitHub PAT you created earlier into the Secret field.
+Give it a meaningful ID and Description, then click OK.
 
 
 **Shell command to run**
